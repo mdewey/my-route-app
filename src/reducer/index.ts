@@ -10,8 +10,7 @@ console.log({ action, state })
 
 switch (action.type) {
   case 'MOVED_ADDED':
-    return { ...state  }
-
+    return { ...state , currentRoute:state.currentRoute.concat({moveId: action.value})}
   default:
     // Returns a new COMPLETE state
     // or I could throw an error

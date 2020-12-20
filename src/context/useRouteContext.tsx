@@ -1,6 +1,12 @@
 import { createContext, useContext } from 'react'
 
+
+export interface Move {
+  moveId:string
+}
+
 export interface AppState {
+  currentRoute:Array<Move>
 }
 
 export interface AppContextInterface {

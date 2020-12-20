@@ -9,7 +9,7 @@ import reducerFunction from './reducer/';
 
 function App() {
   const [state, dispatch] = useReducer(reducerFunction, {
-   
+    currentRoute:[]
   } as AppState)
 
   const ctxt = { state, dispatch } as AppContextInterface
