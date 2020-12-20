@@ -6,6 +6,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 
 import { useRouteContext } from '../context/useRouteContext';
+import { Button } from '@material-ui/core';
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -15,8 +16,9 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     list:{
       display:"flex", 
-      flexDirection:'column'
-    }
+      flexDirection:'column-reverse'
+    },
+    removeLastButton:{}
   }),
 );
 
@@ -27,9 +29,15 @@ const CurrentRoute = () => {
   const { dispatch,  state } = context
   const { currentRoute } = state 
 
+  const clicked = () => {
+    dispatch({type:"REMOVE_LAST"})
+  }
+
   return (
     <div className={classes.root}>
       <header>Your route: </header>
+      <Button onClick={clicked} className={classes.removeLastButton}>Remove last</Button>
+ 
     <List className={classes.list}>
     <ListItem>
           <ListItemText
@@ -37,9 +45,9 @@ const CurrentRoute = () => {
           />
         </ListItem>
       {currentRoute.map((move, i) => {
-        return <ListItem>
+        return <ListItem key={i}>
           <ListItemText
-            primary={`${i} ${move.moveId}`}
+            primary={`${i+1} ${move.moveId}`}
           />
         </ListItem>
       })
