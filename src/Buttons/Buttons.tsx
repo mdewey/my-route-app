@@ -17,7 +17,7 @@ const Buttons = () => {
   const classes = useStyles();
 
   const context = useRouteContext()
-  const { dispatch, state } = context
+  const { dispatch } = context
   
 
   const clicked = (id:string) =>{
