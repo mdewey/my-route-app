@@ -36,7 +36,7 @@ const CurrentRoute = () => {
   return (
     <div className={classes.root}>
       <header>Your route: </header>
-      <Button onClick={clicked} className={classes.removeLastButton}>Remove last</Button>
+      <Button variant="outlined" color="secondary" onClick={clicked} className={classes.removeLastButton}>Remove last</Button>
  
     <List className={classes.list}>
     <ListItem>

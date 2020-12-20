@@ -26,14 +26,15 @@ const Buttons = () => {
 
   return (
     <div className={classes.root}>
-        <Button onClick={() => clicked('left-hand')} className={classes.button}>Left hand</Button>
-        <Button onClick={() => clicked('dyno')} className={classes.button}>Dyno</Button>
-        <Button onClick={() => clicked('match-hands')} className={classes.button}>Match hands</Button>
-        <Button onClick={() => clicked('right-hand')} className={classes.button}>Right hand</Button>
-        <Button onClick={() => clicked('left-foot')} className={classes.button}>Left foot</Button>
-        <Button onClick={() => clicked('foot-swap')} className={classes.button}>foot swap</Button>
-        <Button onClick={() => clicked('match-feet')} className={classes.button}>Match feet</Button>
-        <Button onClick={() => clicked('right-foot')} className={classes.button}>Right foot</Button>
+      <br/>
+        <Button variant="outlined" color="primary" onClick={() => clicked('left-hand')} className={classes.button}>Left hand</Button>
+        <Button variant="outlined" color="primary" onClick={() => clicked('dyno')} className={classes.button}>Dyno</Button>
+        <Button variant="outlined" color="primary" onClick={() => clicked('match-hands')} className={classes.button}>Match hands</Button>
+        <Button variant="outlined" color="primary" onClick={() => clicked('right-hand')} className={classes.button}>Right hand</Button>
+        <Button variant="outlined" color="primary" onClick={() => clicked('left-foot')} className={classes.button}>Left foot</Button>
+        <Button variant="outlined" color="primary" onClick={() => clicked('foot-swap')} className={classes.button}>foot swap</Button>
+        <Button variant="outlined" color="primary" onClick={() => clicked('match-feet')} className={classes.button}>Match feet</Button>
+        <Button variant="outlined" color="primary" onClick={() => clicked('right-foot')} className={classes.button}>Right foot</Button>
      </div>
   );
 };
